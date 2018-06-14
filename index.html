@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ОКЦ - калкулатор</title>
+    <link type="text/css" rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="scripts/jquery-3.3.1.js"></script>
+    <script src="scripts/bootstrap.js"></script>
+</head>
+<body>
+<header>
+    <div class="navbar navbar-default navbar-fixed-top text-uppercase">
+        <div class="container">
+            <div class="navbar-header">
+                <img src="image/ico.png" class="logo" href="index.html">
+
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+
+            <div class="container">
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</header>
+<main>
+<link rel='stylesheet' href='styles/calculatorStyle.css'/>
+<div class="tabbed" id="tabs">
+    <input type="radio" name="tabs" id="tab-nav-1" checked>
+    <label for="tab-nav-1">Старши</label>
+    <input type="radio" name="tabs" id="tab-nav-2">
+    <label for="tab-nav-2">Атестация</label>
+    <input type="radio" name="tabs" id="tab-nav-3">
+    <label for="tab-nav-3">Без Атестация</label>
+    <input type="radio" name="tabs" id="tab-nav-4">
+    <label for="tab-nav-4">Чисто</label>
+
+    <div class="tabs">
+        <div><form>
+            <p>Брой дежурства като старши:
+                <input class="fieldValue1" type="number" name="dejSt">
+            </p>
+            <br>
+            <p>Извънредни:
+                <input class="fieldValue2" type="number" name="izvanredni">
+            </p>
+            <br>
+            <p>Дни отпуск:
+                <input class="fieldValue3" type="number" name="otpusk">
+            </p>
+            <br>
+            <p>Празнични часове:
+                <input class="fieldValue4" type="number" name="praznichni">
+            </p>
+            <br>
+            <p>Години прослужено време:
+                <input class="fieldValue5" type="number" name="proslujeno">
+            </p>
+            <br>
+            <p>Награди:
+                <input class="fieldValue6" type="number" name="nagradi">
+            </p>
+            <br>
+            <p>Глоби:
+                <input class="fieldValue7" type="number" name="globi">
+            </p>
+            <input class="fa fa-trash clearButton" type="reset" value="&#xf1f8" onclick="this.form.reset()">
+            <input class="sumButton" type="button" value="Пресметни" onclick="calculateStarshi()">
+            <br>
+            <br>
+            <p style="font-weight: bold; font-size: larger">Обща заработка:
+                <input class="fieldValue8" type="text" name="sums">
+            </p>
+        </form>
+        </div>
+
+        <script>
+            function calculateStarshi() {
+                let dejSt = document.getElementsByName("dejSt")[0].value;
+                let izvanredni = document.getElementsByName("izvanredni")[0].value;
+                let otpusk = document.getElementsByName("otpusk")[0].value;
+                let praznichni = document.getElementsByName("praznichni")[0].value;
+                let proslujeno = document.getElementsByName("proslujeno")[0].value;
+                let nagradi = document.getElementsByName("nagradi")[0].value;
+                let globi = document.getElementsByName("globi")[0].value;
+                let starshiSum = (Number(dejSt) * 12) * 7.50;
+                let izvanredniSum = (Number(izvanredni) * 12) * 6.50;
+                let otpuskSum = (Number(otpusk)* 8) * 7;
+                let praznichniSum = Number(praznichni) * 2.55;
+                let proslujenoSum = Number(proslujeno) * 5;
+                let result = (starshiSum + izvanredniSum + otpuskSum + praznichniSum + proslujenoSum + nagradi) - globi;
+                document.getElementsByName("sums")[0].value = `${result.toFixed(2)} лв.`;
+                document.getElementsByName("obshtaZarabotka")[0].value = result.toFixed(2);
+            }
+
+        </script>
+
+        <div><form><p>Брой дежурства:
+            <input class="fieldValue11" type="number" name="dejurstvaA">
+        </p>
+            <br>
+            <p>Дни отпуск:
+                <input class="fieldValue3" type="number" name="otpuskA">
+            </p>
+            <br>
+            <p>Празнични часове:
+                <input class="fieldValue4" type="number" name="praznichniA">
+            </p>
+            <br>
+            <p>Години прослужено време:
+                <input class="fieldValue5" type="number" name="proslujenoA">
+            </p>
+            <br>
+            <p>Награди:
+                <input class="fieldValue6" type="number" name="nagradiA">
+            </p>
+            <br>
+            <p>Глоби:
+                <input class="fieldValue7" type="number" name="globiA">
+            </p>
+            <br>
+            <input class="fa fa-trash clearButton" type="reset" value="&#xf1f8" onclick="this.form.reset()">
+            <input class="sumButton" type="button" value="Пресметни" onclick="calculateAtestacia()">
+            <br>
+            <br>
+            <p style="font-weight: bold; font-size: larger">Обща заработка:
+                <input class="fieldValue8" type="text" name="sumA">
+            </p>
+        </form>
+        </div>
+
+        <script>
+            function calculateAtestacia() {
+                let dejursvaA = document.getElementsByName("dejurstvaA")[0].value;
+                let otpuskA = document.getElementsByName("otpuskA")[0].value;
+                let praznichniA = document.getElementsByName("praznichniA")[0].value;
+                let proslujenoA = document.getElementsByName("proslujenoA")[0].value;
+                let nagradiA = document.getElementsByName("nagradiA")[0].value;
+                let globiA = document.getElementsByName("globiA")[0].value;
+                let dejurstvaASum = (Number(dejursvaA) * 12) * 6.50;
+                let otpuskSum = (Number(otpuskA)* 8) * 6;
+                let praznichniSum = Number(praznichniA) * 2.55;
+                let proslujenoSum = Number(proslujenoA) * 5;
+                let result = (dejurstvaASum + otpuskSum + praznichniSum + proslujenoSum + nagradiA) - globiA;
+                document.getElementsByName("sumA")[0].value = `${result.toFixed(2)} лв.`;
+                document.getElementsByName("obshtaZarabotka")[0].value = result.toFixed(2);
+            }
+
+        </script>
+
+
+        <div><form><p>Брой дежурства:
+            <input class="fieldValue11" type="number" name="dejurstvaB">
+        </p>
+            <br>
+            <p>Дни отпуск:
+                <input class="fieldValue3" type="number" name="otpuskB">
+            </p>
+            <br>
+            <p>Празнични часове:
+                <input class="fieldValue4" type="number" name="praznichniB">
+            </p>
+            <br>
+            <p>Години прослужено време:
+                <input class="fieldValue5" type="number"  name="proslujenoB">
+            </p>
+            <br>
+            <p>Награди:
+                <input class="fieldValue6" type="number" name="nagradiB">
+            </p>
+            <br>
+            <p>Глоби:
+                <input class="fieldValue7" type="number" name="globiB">
+            </p>
+            <br>
+            <input class="fa fa-trash clearButton" type="reset" value="&#xf1f8" onclick="this.form.reset()">
+            <input class="sumButton" type="button" value="Пресметни" onclick="calculateBezAtestacia()">
+            <br>
+            <br>
+            <p style="font-weight: bold; font-size: larger">Обща заработка:
+                <input class="fieldValue8" type="text" name="sumB">
+            </p>
+        </form>
+        </div>
+
+        <script>
+            function calculateBezAtestacia() {
+                let dejursvaB = document.getElementsByName("dejurstvaB")[0].value;
+                let otpuskB = document.getElementsByName("otpuskB")[0].value;
+                let praznichniB = document.getElementsByName("praznichniB")[0].value;
+                let proslujenoB = document.getElementsByName("proslujenoB")[0].value;
+                let nagradiB = document.getElementsByName("nagradiB")[0].value;
+                let globiB = document.getElementsByName("globiB")[0].value;
+                let dejurstvaBSum = (Number(dejursvaB) * 12) * 6;
+                let otpuskSum = (Number(otpuskB)* 8) * 6;
+                let praznichniSum = Number(praznichniB) * 2.55;
+                let proslujenoSum = Number(proslujenoB) * 5;
+                let result = (dejurstvaBSum + otpuskSum + praznichniSum + proslujenoSum + nagradiB) - globiB;
+                document.getElementsByName("sumB")[0].value = `${result.toFixed(2)} лв.`;
+                document.getElementsByName("obshtaZarabotka")[0].value = result.toFixed(2);
+            }
+
+        </script>
+
+
+        <div id="tab4"><form>
+            <p>Обща заработка:
+                <input class="fieldValue11" type="number" name="obshtaZarabotka">
+            </p>
+            <br>
+            <p>Превод:
+                <input class="fieldValue9" type="number" name="prevod">
+            </p>
+            <br>
+            <p>Удръжки:
+                <input class="fieldValue6" type="number" name="udrajki">
+            </p>
+            <br>
+            <p>Други удръжки:
+                <input class="fieldValue10" type="number" name="drugiUdrajki">
+            </p>
+            <br>
+            <input class="fa fa-trash clearButton" type="reset" value="&#xf1f8" onclick="this.form.reset()">
+            <input class="sumButton" type="button" value="Пресметни" onclick="calculateChisto()">
+            <br>
+            <br>
+            <p style="font-weight: bold; font-size: larger">За получаване:
+                <input class="fieldValue12" type="text" name="SumChisto">
+            </p>
+        </form>
+        </div>
+        <script>
+            function calculateChisto() {
+                let obshtaZarabotka = document.getElementsByName("obshtaZarabotka")[0].value;
+                let prevod = document.getElementsByName("prevod")[0].value;
+                let udrajki = document.getElementsByName("udrajki")[0].value;
+                let drugiUdrajki = document.getElementsByName("drugiUdrajki")[0].value;
+                if (obshtaZarabotka < 60){
+                    alert("Грешно въведена стойност в полето обща заработка, не може да е по-малка от ваучерите за получаване (60 лв.)" +
+                        "\nМоля опитайте отново !");
+                    document.getElementsByName("SumChisto")[0].value = this.form.reset();
+                }
+                let result = obshtaZarabotka - 60 - prevod - udrajki - drugiUdrajki;
+                document.getElementsByName("SumChisto")[0].value = `${result.toFixed(2)} лв. и 60 лв. ваучери`;
+            }
+        </script>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.6/prefixfree.min.js"></script>
+</main>
+
+</body>
+</html>
