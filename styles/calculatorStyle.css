@@ -35,11 +35,11 @@
     box-shadow: 0 9px #999;
 }
 .sumButton:hover {
-    background-color: #46AAC0;
+    background-color: #3780D4;
 }
 
 .sumButton:active {
-    background-color: #4EC6DE;
+    background-color: #3780D4;
     box-shadow: 0 5px #666;
     transform: translateY(4px);
 }
