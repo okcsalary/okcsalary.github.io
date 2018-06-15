@@ -1,6 +1,6 @@
 
 .clearButton {
-    background-color: #4EC6DE;
+    background-color: #368de0;
     border: none;
     border-radius: 15px;
     color: white;
@@ -29,7 +29,7 @@
     cursor: pointer;
     outline: none;
     color: #fff;
-    background-color: #4EC6DE;
+    background-color: #368de0;
     border: none;
     border-radius: 15px;
     box-shadow: 0 9px #999;
@@ -57,7 +57,7 @@ input[type=number]::-webkit-outer-spin-button {
     left: 110px;
     background: transparent;
     border: none;
-    border-bottom: 2px solid #4EC6DE;
+    border-bottom: 2px solid #368de0;
     margin: 1px;
     padding: 2px;
     outline: none;
@@ -69,7 +69,7 @@ input[type=number]::-webkit-outer-spin-button {
     left: 224px;
     background: transparent;
     border: none;
-    border-bottom: 2px solid #4EC6DE;
+    border-bottom: 2px solid #368de0;
     margin: 1px;
     padding: 2px;
     outline: none;
@@ -80,7 +80,7 @@ input[type=number]::-webkit-outer-spin-button {
     left: 235px;
     background: transparent;
     border: none;
-    border-bottom: 2px solid #4EC6DE;
+    border-bottom: 2px solid #368de0;
     margin: 1px;
     padding: 2px;
     outline: none;
@@ -91,7 +91,7 @@ input[type=number]::-webkit-outer-spin-button {
     left: 183px;
     background: transparent;
     border: none;
-    border-bottom: 2px solid #4EC6DE;
+    border-bottom: 2px solid #368de0;
     margin: 1px;
     padding: 2px;
     outline: none;
@@ -102,7 +102,7 @@ input[type=number]::-webkit-outer-spin-button {
     left: 129px;
     background: transparent;
     border: none;
-    border-bottom: 2px solid #4EC6DE;
+    border-bottom: 2px solid #368de0;
     margin: 1px;
     padding: 2px;
     outline: none;
@@ -113,7 +113,7 @@ input[type=number]::-webkit-outer-spin-button {
     left: 252px;
     background: transparent;
     border: none;
-    border-bottom: 2px solid #4EC6DE;
+    border-bottom: 2px solid #368de0;
     margin: 1px;
     padding: 2px;
     outline: none;
@@ -124,7 +124,7 @@ input[type=number]::-webkit-outer-spin-button {
     left: 269px;
     background: transparent;
     border: none;
-    border-bottom: 2px solid #4EC6DE;
+    border-bottom: 2px solid #368de0;
     margin: 1px;
     padding: 2px;
     outline: none;
@@ -135,7 +135,7 @@ input[type=number]::-webkit-outer-spin-button {
     left: 145px;
     background: transparent;
     border: none;
-    border-bottom: 2px solid #4EC6DE;
+    border-bottom: 2px solid #368de0;
     margin: 1px;
     padding: 2px;
     outline: none;
@@ -146,7 +146,7 @@ input[type=number]::-webkit-outer-spin-button {
     left: 259px;
     background: transparent;
     border: none;
-    border-bottom: 2px solid #4EC6DE;
+    border-bottom: 2px solid #368de0;
     margin: 1px;
     padding: 2px;
     outline: none;
@@ -157,7 +157,7 @@ input[type=number]::-webkit-outer-spin-button {
     left: 211px;
     background: transparent;
     border: none;
-    border-bottom: 2px solid #4EC6DE;
+    border-bottom: 2px solid #368de0;
     margin: 1px;
     padding: 2px;
     outline: none;
@@ -168,7 +168,7 @@ input[type=number]::-webkit-outer-spin-button {
     left: 196px;
     background: transparent;
     border: none;
-    border-bottom: 2px solid #4EC6DE;
+    border-bottom: 2px solid #368de0;
     margin: 1px;
     padding: 2px;
     outline: none;
@@ -179,7 +179,7 @@ input[type=number]::-webkit-outer-spin-button {
     left: 130px;
     background: transparent;
     border: none;
-    border-bottom: 2px solid#4EC6DE;
+    border-bottom: 2px solid#368de0;
     margin: 1px;
     padding: 2px;
     outline: none;
@@ -200,7 +200,7 @@ body {
 }
 
 ::selection {
-    background-color: #4EC6DE;
+    background-color: #368de0;
 
 
 }
@@ -227,7 +227,7 @@ body {
 
 .tabbed > label:hover,
 .tabbed > input:checked + label {
-    background: #4EC6DE;
+    background: #368de0;
     color: white;
 }
 
@@ -239,7 +239,7 @@ body {
 .tabs > div {
     width: 700px;
     position: absolute;
-    border: 2px solid #4EC6DE;
+    border: 2px solid #368de0;
     padding: 10px 30px 40px;
     line-height: 1.4em;
     opacity: 0;
@@ -272,7 +272,7 @@ body {
         margin-bottom: 60px;
     }
     .tabs > div h2 {
-        border-bottom: 2px solid #4EC6DE;
+        border-bottom: 2px solid #368de0;
         padding-bottom: .5em;
     }
 }
