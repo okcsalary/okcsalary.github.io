@@ -98,7 +98,7 @@
                 let otpuskSum = (Number(otpusk)* 8) * 7;
                 let praznichniSum = Number(praznichni) * 2.55;
                 let proslujenoSum = Number(proslujeno) * 5;
-                let result = (starshiSum + izvanredniSum + otpuskSum + praznichniSum + proslujenoSum + nagradi) - globi;
+                let result = (starshiSum + izvanredniSum + otpuskSum + praznichniSum + proslujenoSum + Number(nagradi)) - Number(globi);
                 document.getElementsByName("sums")[0].value = `${result.toFixed(2)} лв.`;
                 document.getElementsByName("obshtaZarabotka")[0].value = result.toFixed(2);
             }
@@ -151,7 +151,7 @@
                 let otpuskSum = (Number(otpuskA)* 8) * 6;
                 let praznichniSum = Number(praznichniA) * 2.55;
                 let proslujenoSum = Number(proslujenoA) * 5;
-                let result = (dejurstvaASum + otpuskSum + praznichniSum + proslujenoSum + nagradiA) - globiA;
+                let result = (dejurstvaASum + otpuskSum + praznichniSum + proslujenoSum + Number(nagradiA)) - Number(globiA);
                 document.getElementsByName("sumA")[0].value = `${result.toFixed(2)} лв.`;
                 document.getElementsByName("obshtaZarabotka")[0].value = result.toFixed(2);
             }
@@ -205,7 +205,7 @@
                 let otpuskSum = (Number(otpuskB)* 8) * 6;
                 let praznichniSum = Number(praznichniB) * 2.55;
                 let proslujenoSum = Number(proslujenoB) * 5;
-                let result = (dejurstvaBSum + otpuskSum + praznichniSum + proslujenoSum + nagradiB) - globiB;
+                let result = (dejurstvaBSum + otpuskSum + praznichniSum + proslujenoSum + Number(nagradiB)) - Number(globiB);
                 document.getElementsByName("sumB")[0].value = `${result.toFixed(2)} лв.`;
                 document.getElementsByName("obshtaZarabotka")[0].value = result.toFixed(2);
             }
@@ -245,12 +245,12 @@
                 let prevod = document.getElementsByName("prevod")[0].value;
                 let udrajki = document.getElementsByName("udrajki")[0].value;
                 let drugiUdrajki = document.getElementsByName("drugiUdrajki")[0].value;
-                if (obshtaZarabotka < 60){
+                if (Number(obshtaZarabotka) < 60){
                     alert("Грешно въведена стойност в полето обща заработка, не може да е по-малка от ваучерите за получаване (60 лв.)" +
                         "\nМоля опитайте отново !");
                     document.getElementsByName("SumChisto")[0].value = this.form.reset();
                 }
-                let result = obshtaZarabotka - 60 - prevod - udrajki - drugiUdrajki;
+                let result = Number(obshtaZarabotka) - 60 - Number(prevod) - Number(udrajki) - Number(drugiUdrajki);
                 document.getElementsByName("SumChisto")[0].value = `${result.toFixed(2)} лв. и 60 лв. ваучери`;
             }
         </script>
