@@ -1,3 +1,23 @@
+.arrowBtn {
+    background-color: #368de0;
+    border: none;
+    border-radius: 15px;
+    color: white;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+    left: 200px;
+    position: relative;
+}
+.arrowBtn:active {
+    background-color: #3780D4;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+.arrowBtn:hover {
+    background-color: #3780D4;
+}
 
 .clearButton {
     background-color: #368de0;
@@ -8,7 +28,6 @@
     font-size: 16px;
     cursor: pointer;
     outline: none;
-
 }
 .clearButton:hover {
     background-color: darkred;

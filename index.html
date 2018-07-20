@@ -66,7 +66,8 @@
             <br>
             <br>
             <p style="font-weight: bold; font-size: larger">Обща заработка:
-                <input class="fieldValue8" type="text" name="sums" disabled="disabled">
+                <input class="fieldValue8" type="text" name="sums" id="sums" disabled="disabled">
+                <input class="fa fa-chevron-right arrowBtn" type="button" value="&#xf054 " onclick="arrowLogicStarshi()">
             </p>
         </form>
         </div>
@@ -87,7 +88,29 @@
                 let proslujenoSum = Number(proslujeno) * 5;
                 let result = (starshiSum + izvanredniSum + otpuskSum + praznichniSum + proslujenoSum + Number(nagradi)) - Number(globi);
                 document.getElementsByName("sums")[0].value = `${result.toFixed(2)} лв.`;
-                document.getElementsByName("obshtaZarabotka")[0].value = result.toFixed(2);
+            }
+            
+            function arrowLogicStarshi() {
+             $('#tab-nav-4').click()
+
+                if ($('#sums').val() !== '') {
+                    let dejSt = document.getElementsByName("dejSt")[0].value;
+                    let izvanredni = document.getElementsByName("izvanredni")[0].value;
+                    let otpusk = document.getElementsByName("otpusk")[0].value;
+                    let praznichni = document.getElementsByName("praznichni")[0].value;
+                    let proslujeno = document.getElementsByName("proslujeno")[0].value;
+                    let nagradi = document.getElementsByName("nagradi")[0].value;
+                    let globi = document.getElementsByName("globi")[0].value;
+                    let starshiSum = (Number(dejSt) * 12) * 7.50;
+                    let izvanredniSum = (Number(izvanredni) * 12) * 6.50;
+                    let otpuskSum = (Number(otpusk) * 8) * 7;
+                    let praznichniSum = Number(praznichni) * 2.55;
+                    let proslujenoSum = Number(proslujeno) * 5;
+                    let result = (starshiSum + izvanredniSum + otpuskSum + praznichniSum + proslujenoSum + Number(nagradi)) - Number(globi);
+                    document.getElementsByName("obshtaZarabotka")[0].value = result.toFixed(2);
+                } else {
+                    $('#obshtaZarabotka').val('')
+                }
             }
 
         </script>
@@ -121,7 +144,8 @@
             <br>
             <br>
             <p style="font-weight: bold; font-size: larger">Обща заработка:
-                <input class="fieldValue8" type="text" name="sumA" disabled="disabled">
+                <input class="fieldValue8" type="text" name="sumA" id="sumA" disabled="disabled">
+                <input class="fa fa-chevron-right arrowBtn" type="button" value="&#xf054 " onclick="arrowLogicAtestacia()">
             </p>
         </form>
         </div>
@@ -140,7 +164,27 @@
                 let proslujenoSum = Number(proslujenoA) * 5;
                 let result = (dejurstvaASum + otpuskSum + praznichniSum + proslujenoSum + Number(nagradiA)) - Number(globiA);
                 document.getElementsByName("sumA")[0].value = `${result.toFixed(2)} лв.`;
+            }
+
+            function arrowLogicAtestacia() {
+                $('#tab-nav-4').click()
+
+                if ($('#sumA').val() !== '') {
+                let dejursvaA = document.getElementsByName("dejurstvaA")[0].value;
+                let otpuskA = document.getElementsByName("otpuskA")[0].value;
+                let praznichniA = document.getElementsByName("praznichniA")[0].value;
+                let proslujenoA = document.getElementsByName("proslujenoA")[0].value;
+                let nagradiA = document.getElementsByName("nagradiA")[0].value;
+                let globiA = document.getElementsByName("globiA")[0].value;
+                let dejurstvaASum = (Number(dejursvaA) * 12) * 6.50;
+                let otpuskSum = (Number(otpuskA)* 8) * 6;
+                let praznichniSum = Number(praznichniA) * 2.55;
+                let proslujenoSum = Number(proslujenoA) * 5;
+                let result = (dejurstvaASum + otpuskSum + praznichniSum + proslujenoSum + Number(nagradiA)) - Number(globiA);
                 document.getElementsByName("obshtaZarabotka")[0].value = result.toFixed(2);
+                } else {
+                    $('#obshtaZarabotka').val('')
+                }
             }
 
         </script>
@@ -175,7 +219,8 @@
             <br>
             <br>
             <p style="font-weight: bold; font-size: larger">Обща заработка:
-                <input class="fieldValue8" type="text" name="sumB" disabled="disabled">
+                <input class="fieldValue8" type="text" name="sumB" id="sumB" disabled="disabled">
+                <input class="fa fa-chevron-right arrowBtn" type="button" value="&#xf054 " onclick="arrowLogicBezAtestacia()">
             </p>
         </form>
         </div>
@@ -194,7 +239,27 @@
                 let proslujenoSum = Number(proslujenoB) * 5;
                 let result = (dejurstvaBSum + otpuskSum + praznichniSum + proslujenoSum + Number(nagradiB)) - Number(globiB);
                 document.getElementsByName("sumB")[0].value = `${result.toFixed(2)} лв.`;
+            }
+
+            function arrowLogicBezAtestacia() {
+                $('#tab-nav-4').click()
+
+                if ($('#sumB').val() !== '') {
+                let dejursvaB = document.getElementsByName("dejurstvaB")[0].value;
+                let otpuskB = document.getElementsByName("otpuskB")[0].value;
+                let praznichniB = document.getElementsByName("praznichniB")[0].value;
+                let proslujenoB = document.getElementsByName("proslujenoB")[0].value;
+                let nagradiB = document.getElementsByName("nagradiB")[0].value;
+                let globiB = document.getElementsByName("globiB")[0].value;
+                let dejurstvaBSum = (Number(dejursvaB) * 12) * 6;
+                let otpuskSum = (Number(otpuskB)* 8) * 6;
+                let praznichniSum = Number(praznichniB) * 2.55;
+                let proslujenoSum = Number(proslujenoB) * 5;
+                let result = (dejurstvaBSum + otpuskSum + praznichniSum + proslujenoSum + Number(nagradiB)) - Number(globiB);
                 document.getElementsByName("obshtaZarabotka")[0].value = result.toFixed(2);
+                } else {
+                    $('#obshtaZarabotka').val('')
+                }
             }
 
         </script>
@@ -202,7 +267,7 @@
 
         <div id="tab4"><form>
             <p>Обща заработка:
-                <input class="fieldValue11" type="number" name="obshtaZarabotka">
+                <input class="fieldValue11" type="number" id="obshtaZarabotka" name="obshtaZarabotka">
             </p>
             <br>
             <p>Превод:
