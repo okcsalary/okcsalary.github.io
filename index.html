@@ -10,6 +10,7 @@
     <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
     <script src="scripts/jquery-3.3.1.js"></script>
     <script src="scripts/bootstrap.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 <body>
 <header>
@@ -298,8 +299,8 @@
                 let udrajki = document.getElementsByName("udrajki")[0].value;
                 let drugiUdrajki = document.getElementsByName("drugiUdrajki")[0].value;
                 if (Number(obshtaZarabotka) < 60){
-                    alert("Грешно въведена стойност в полето обща заработка, не може да е по-малка от ваучерите за получаване (60 лв.)" +
-                        "\nМоля опитайте отново !");
+                    swal('Грешка',"Грешно въведена стойност в полето обща заработка, не може да е по-малка от ваучерите за получаване (60 лв.)" +
+                        "\nМоля опитайте отново !", 'error');
                     document.getElementsByName("SumChisto")[0].value = this.form.reset();
                 }
                 let result = Number(obshtaZarabotka) - 60 - Number(prevod) - Number(udrajki) - Number(drugiUdrajki);

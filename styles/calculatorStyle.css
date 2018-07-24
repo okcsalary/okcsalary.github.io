@@ -1,3 +1,11 @@
+.swal-button {
+    background-color: #368de0;
+}
+
+.swal-overlay {
+    background-color: rgba(54, 141, 224, 0.45);
+}
+
 .arrowBtn {
     background-color: #368de0;
     border: none;
