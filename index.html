@@ -35,6 +35,13 @@
 
     <div class="tabs">
         <div><form>
+            <div class="onoffswitch">
+                <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked >
+                <label class="onoffswitch-label" for="myonoffswitch">
+                    <span class="onoffswitch-inner"></span>
+                    <span class="onoffswitch-switch"></span>
+                </label>
+            </div>
             <p>Брой дежурства като старши:
                 <input class="fieldValue1" type="number" name="dejSt">
             </p>
@@ -63,17 +70,50 @@
                 <input class="fieldValue7" type="number" name="globi">
             </p>
             <input class="fa fa-trash clearButton" type="reset" value="&#xf1f8" onclick="this.form.reset()">
-            <input class="sumButton" type="button" value="Пресметни" onclick="calculateStarshi()">
+            <input class="sumButton" type="button" value="Пресметни" onclick="calculate()">
             <br>
             <br>
             <p style="font-weight: bold; font-size: larger">Обща заработка:
                 <input class="fieldValue8" type="text" name="sums" id="sums" disabled="disabled">
-                <input class="fa fa-chevron-right arrowBtn" type="button" value="&#xf054 " onclick="arrowLogicStarshi()">
+                <input class="fa fa-chevron-right arrowBtn" type="button" value="&#xf054 " onclick="arrow()">
             </p>
         </form>
         </div>
 
         <script>
+            function calculate() {
+                if ($('#myonoffswitch').is(':checked')) {
+                    calculateStarshi()
+                } else {
+                    calculateStarshiBezBonus()
+                }
+            }
+
+            function arrow() {
+                if ($('#myonoffswitch').is(':checked')) {
+                    arrowLogicStarshi()
+                } else {
+                    arrowLogicStarshiBezBonus()
+                }
+            }
+
+            function calculateStarshiBezBonus() {
+                let dejSt = document.getElementsByName("dejSt")[0].value;
+                let izvanredni = document.getElementsByName("izvanredni")[0].value;
+                let otpusk = document.getElementsByName("otpusk")[0].value;
+                let praznichni = document.getElementsByName("praznichni")[0].value;
+                let proslujeno = document.getElementsByName("proslujeno")[0].value;
+                let nagradi = document.getElementsByName("nagradi")[0].value;
+                let globi = document.getElementsByName("globi")[0].value;
+                let starshiSum = (Number(dejSt) * 12) * 7;
+                let izvanredniSum = (Number(izvanredni) * 12) * 6.50;
+                let otpuskSum = (Number(otpusk)* 8) * 7;
+                let praznichniSum = Number(praznichni) * 2.55;
+                let proslujenoSum = Number(proslujeno) * 5;
+                let result = (starshiSum + izvanredniSum + otpuskSum + praznichniSum + proslujenoSum + Number(nagradi)) - Number(globi);
+                document.getElementsByName("sums")[0].value = `${result.toFixed(2)} лв.`;
+            }
+
             function calculateStarshi() {
                 let dejSt = document.getElementsByName("dejSt")[0].value;
                 let izvanredni = document.getElementsByName("izvanredni")[0].value;
@@ -90,6 +130,7 @@
                 let result = (starshiSum + izvanredniSum + otpuskSum + praznichniSum + proslujenoSum + Number(nagradi)) - Number(globi);
                 document.getElementsByName("sums")[0].value = `${result.toFixed(2)} лв.`;
             }
+
             
             function arrowLogicStarshi() {
              $('#tab-nav-4').click()
@@ -103,6 +144,29 @@
                     let nagradi = document.getElementsByName("nagradi")[0].value;
                     let globi = document.getElementsByName("globi")[0].value;
                     let starshiSum = (Number(dejSt) * 12) * 7.50;
+                    let izvanredniSum = (Number(izvanredni) * 12) * 6.50;
+                    let otpuskSum = (Number(otpusk) * 8) * 7;
+                    let praznichniSum = Number(praznichni) * 2.55;
+                    let proslujenoSum = Number(proslujeno) * 5;
+                    let result = (starshiSum + izvanredniSum + otpuskSum + praznichniSum + proslujenoSum + Number(nagradi)) - Number(globi);
+                    document.getElementsByName("obshtaZarabotka")[0].value = result.toFixed(2);
+                } else {
+                    $('#obshtaZarabotka').val('')
+                }
+            }
+
+            function arrowLogicStarshiBezBonus() {
+                $('#tab-nav-4').click()
+
+                if ($('#sums').val() !== '') {
+                    let dejSt = document.getElementsByName("dejSt")[0].value;
+                    let izvanredni = document.getElementsByName("izvanredni")[0].value;
+                    let otpusk = document.getElementsByName("otpusk")[0].value;
+                    let praznichni = document.getElementsByName("praznichni")[0].value;
+                    let proslujeno = document.getElementsByName("proslujeno")[0].value;
+                    let nagradi = document.getElementsByName("nagradi")[0].value;
+                    let globi = document.getElementsByName("globi")[0].value;
+                    let starshiSum = (Number(dejSt) * 12) * 7;
                     let izvanredniSum = (Number(izvanredni) * 12) * 6.50;
                     let otpuskSum = (Number(otpusk) * 8) * 7;
                     let praznichniSum = Number(praznichni) * 2.55;
