@@ -27,7 +27,7 @@ function calculateStarshiBezBonus() {
     let starshiSum = (Number(dejSt) * 12) * 7;
     let izvanredniSum = (Number(izvanredni) * 12) * 6.50;
     let otpuskSum = (Number(otpusk)* 8) * 7;
-    let praznichniSum = Number(praznichni) * 2.55;
+    let praznichniSum = Number(praznichni) * 7;
     let proslujenoSum = Number(proslujeno) * 5;
     let result = (starshiSum + izvanredniSum + otpuskSum + praznichniSum + proslujenoSum + Number(nagradi)) - Number(globi);
     document.getElementsByName("sums")[0].value = `${result.toFixed(2)} лв.`;
@@ -44,7 +44,7 @@ function calculateStarshi() {
     let starshiSum = (Number(dejSt) * 12) * 7.50;
     let izvanredniSum = (Number(izvanredni) * 12) * 6.50;
     let otpuskSum = (Number(otpusk)* 8) * 7;
-    let praznichniSum = Number(praznichni) * 2.55;
+    let praznichniSum = Number(praznichni) * 7.50;
     let proslujenoSum = Number(proslujeno) * 5;
     let result = (starshiSum + izvanredniSum + otpuskSum + praznichniSum + proslujenoSum + Number(nagradi)) - Number(globi);
     document.getElementsByName("sums")[0].value = `${result.toFixed(2)} лв.`;
@@ -65,7 +65,7 @@ function arrowLogicStarshi() {
         let starshiSum = (Number(dejSt) * 12) * 7.50;
         let izvanredniSum = (Number(izvanredni) * 12) * 6.50;
         let otpuskSum = (Number(otpusk) * 8) * 7;
-        let praznichniSum = Number(praznichni) * 2.55;
+        let praznichniSum = Number(praznichni) * 7.50;
         let proslujenoSum = Number(proslujeno) * 5;
         let result = (starshiSum + izvanredniSum + otpuskSum + praznichniSum + proslujenoSum + Number(nagradi)) - Number(globi);
         document.getElementsByName("obshtaZarabotka")[0].value = result.toFixed(2);
@@ -88,7 +88,7 @@ function arrowLogicStarshiBezBonus() {
         let starshiSum = (Number(dejSt) * 12) * 7;
         let izvanredniSum = (Number(izvanredni) * 12) * 6.50;
         let otpuskSum = (Number(otpusk) * 8) * 7;
-        let praznichniSum = Number(praznichni) * 2.55;
+        let praznichniSum = Number(praznichni) * 7;
         let proslujenoSum = Number(proslujeno) * 5;
         let result = (starshiSum + izvanredniSum + otpuskSum + praznichniSum + proslujenoSum + Number(nagradi)) - Number(globi);
         document.getElementsByName("obshtaZarabotka")[0].value = result.toFixed(2);
@@ -109,7 +109,7 @@ function calculateAtestacia() {
     let globiA = document.getElementsByName("globiA")[0].value;
     let dejurstvaASum = (Number(dejursvaA) * 12) * 6.50;
     let otpuskSum = (Number(otpuskA)* 8) * 6;
-    let praznichniSum = Number(praznichniA) * 2.55;
+    let praznichniSum = Number(praznichniA) * 6.50;
     let proslujenoSum = Number(proslujenoA) * 5;
     let result = (dejurstvaASum + otpuskSum + praznichniSum + proslujenoSum + Number(nagradiA)) - Number(globiA);
     document.getElementsByName("sumA")[0].value = `${result.toFixed(2)} лв.`;
@@ -127,7 +127,7 @@ function arrowLogicAtestacia() {
         let globiA = document.getElementsByName("globiA")[0].value;
         let dejurstvaASum = (Number(dejursvaA) * 12) * 6.50;
         let otpuskSum = (Number(otpuskA)* 8) * 6;
-        let praznichniSum = Number(praznichniA) * 2.55;
+        let praznichniSum = Number(praznichniA) * 6.50;
         let proslujenoSum = Number(proslujenoA) * 5;
         let result = (dejurstvaASum + otpuskSum + praznichniSum + proslujenoSum + Number(nagradiA)) - Number(globiA);
         document.getElementsByName("obshtaZarabotka")[0].value = result.toFixed(2);
@@ -149,7 +149,7 @@ function calculateBezAtestacia() {
     let globiB = document.getElementsByName("globiB")[0].value;
     let dejurstvaBSum = (Number(dejursvaB) * 12) * 6;
     let otpuskSum = (Number(otpuskB)* 8) * 6;
-    let praznichniSum = Number(praznichniB) * 2.55;
+    let praznichniSum = Number(praznichniB) * 6;
     let proslujenoSum = Number(proslujenoB) * 5;
     let result = (dejurstvaBSum + otpuskSum + praznichniSum + proslujenoSum + Number(nagradiB)) - Number(globiB);
     document.getElementsByName("sumB")[0].value = `${result.toFixed(2)} лв.`;
@@ -167,7 +167,7 @@ function arrowLogicBezAtestacia() {
         let globiB = document.getElementsByName("globiB")[0].value;
         let dejurstvaBSum = (Number(dejursvaB) * 12) * 6;
         let otpuskSum = (Number(otpuskB)* 8) * 6;
-        let praznichniSum = Number(praznichniB) * 2.55;
+        let praznichniSum = Number(praznichniB) * 6;
         let proslujenoSum = Number(proslujenoB) * 5;
         let result = (dejurstvaBSum + otpuskSum + praznichniSum + proslujenoSum + Number(nagradiB)) - Number(globiB);
         document.getElementsByName("obshtaZarabotka")[0].value = result.toFixed(2);
