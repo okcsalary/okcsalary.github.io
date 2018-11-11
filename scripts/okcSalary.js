@@ -1,10 +1,42 @@
+// Window width logic
+
+$(document).ready(function () {
+    if ($(window).width() <= 480) {
+        $('.arrowBtn').hide()
+
+        $('#clearStarshi').on('click', function () {
+            $('.arrowBtn').hide()
+            $('#sumBtnStarshi').show()
+        })
+
+        $('#resetAtestacia').on('click', function () {
+            $('.arrowBtn').hide()
+            $('#sumBtnAtestacia').show()
+        })
+
+        $('#resetBezAtestacia').on('click', function () {
+            $('.arrowBtn').hide()
+            $('#sumBtnBezAtestacia').show()
+        })
+    }
+})
+
 // Logic for tab "Starshi"
+
+function showHidebutton() {
+    if ($(window).width() <= 480) {
+        $('#sumBtnStarshi').hide()
+        $('.arrowBtn').show()
+    }
+}
 
 function calculate() {
     if ($('#myonoffswitch').is(':checked')) {
         calculateStarshi()
+        showHidebutton()
     } else {
         calculateStarshiBezBonus()
+        showHidebutton()
     }
 }
 
@@ -113,6 +145,10 @@ function calculateAtestacia() {
     let proslujenoSum = Number(proslujenoA) * 5;
     let result = (dejurstvaASum + otpuskSum + praznichniSum + proslujenoSum + Number(nagradiA)) - Number(globiA);
     document.getElementsByName("sumA")[0].value = `${result.toFixed(2)} лв.`;
+    if ($(window).width() <= 480) {
+        $('#sumBtnAtestacia').hide()
+        $('.arrowBtn').show()
+    }
 }
 
 function arrowLogicAtestacia() {
@@ -153,6 +189,10 @@ function calculateBezAtestacia() {
     let proslujenoSum = Number(proslujenoB) * 5;
     let result = (dejurstvaBSum + otpuskSum + praznichniSum + proslujenoSum + Number(nagradiB)) - Number(globiB);
     document.getElementsByName("sumB")[0].value = `${result.toFixed(2)} лв.`;
+    if ($(window).width() <= 480) {
+        $('#sumBtnBezAtestacia').hide()
+        $('.arrowBtn').show()
+    }
 }
 
 function arrowLogicBezAtestacia() {

@@ -333,22 +333,6 @@ body {
     z-index: 1;
 }
 
-/*@media screen and (max-width: 700px) {*/
-    /*.tabbed { width: 400px }*/
-    /*.tabbed > label { display: none }*/
-    /*.tabs > div {*/
-        /*width: 400px;*/
-        /*border: none;*/
-        /*padding: 0;*/
-        /*opacity: 1;*/
-        /*position: relative;*/
-        /*transform: none;*/
-        /*margin-bottom: 60px;*/
-    /*}*/
-    /*.tabs > div h2 {*/
-        /*border-bottom: 2px solid #368de0;*/
-        /*padding-bottom: .5em;*/
-    /*}*/
-/*}*/
-
-
+.fas {
+    display: none;
+}

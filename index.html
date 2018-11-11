@@ -6,9 +6,9 @@
     <link href="image/ico.ico" rel="shortcut icon" type="image/x-icon">
     <link type="text/css" rel="stylesheet" href="styles/style.css">
     <link type="text/css" rel="stylesheet" href="styles/responsive.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Ravi+Prakash" rel="stylesheet">
-    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="scripts/jquery-3.3.1.js"></script>
     <script src="scripts/bootstrap.js"></script>
     <script src="scripts/okcSalary.js"></script>
@@ -27,13 +27,13 @@
 <link rel='stylesheet' href='styles/calculatorStyle.css'/>
 <div class="tabbed" id="tabs">
     <input type="radio" name="tabs" id="tab-nav-1" checked>
-    <label for="tab-nav-1">Старши</label>
+    <label for="tab-nav-1"><span class="txt">Старши</span><span><i class="fas fa-user-tie"></i></span></label>
     <input type="radio" name="tabs" id="tab-nav-2">
-    <label for="tab-nav-2">Атестация</label>
+    <label for="tab-nav-2"><span class="txt">Атестация</span><span><i class="fas fa-user-plus"></i></span></label>
     <input type="radio" name="tabs" id="tab-nav-3">
-    <label for="tab-nav-3">Без Атестация</label>
+    <label for="tab-nav-3"><span class="txt">Без Атестация</span><span><i class="fas fa-user-minus"></i></span></label>
     <input type="radio" name="tabs" id="tab-nav-4">
-    <label for="tab-nav-4">Чисто</label>
+    <label for="tab-nav-4"><span class="txt">Чисто</span><span><i class="fas fa-hand-holding-usd"></i></span></label>
 
     <div class="tabs">
         <div><form>
@@ -71,13 +71,13 @@
             <p>Глоби:
                 <input class="fieldValue7" type="number" name="globi">
             </p>
-            <input class="fa fa-trash clearButton" type="reset" value="&#xf1f8" onclick="this.form.reset()">
-            <input class="sumButton" type="button" value="Пресметни" onclick="calculate()">
+            <input class="fa fa-trash clearButton" type="reset" id="clearStarshi" value="&#xf1f8" onclick="this.form.reset()">
+            <input class="sumButton" type="button" id="sumBtnStarshi" value="Пресметни" onclick="calculate()">
             <br>
             <br>
             <p style="font-weight: bold; font-size: larger">Обща заработка:
                 <input class="fieldValue8" type="text" name="sums" id="sums" disabled="disabled">
-                <input class="fa fa-chevron-right arrowBtn" type="button" value="&#xf054 " onclick="arrow()">
+                <input class="fa fa-chevron-right arrowBtn" type="button" value="&#xf054" onclick="arrow()">
             </p>
         </form>
         </div>
@@ -107,8 +107,8 @@
                 <input class="fieldValue7" type="number" name="globiA">
             </p>
             <br>
-            <input class="fa fa-trash clearButton" type="reset" value="&#xf1f8" onclick="this.form.reset()">
-            <input class="sumButton" type="button" value="Пресметни" onclick="calculateAtestacia()">
+            <input class="fa fa-trash clearButton" type="reset" id="resetAtestacia" value="&#xf1f8" onclick="this.form.reset()">
+            <input class="sumButton" type="button" id="sumBtnAtestacia" value="Пресметни" onclick="calculateAtestacia()">
             <br>
             <br>
             <p style="font-weight: bold; font-size: larger">Обща заработка:
@@ -143,8 +143,8 @@
                 <input class="fieldValue7" type="number" name="globiB">
             </p>
             <br>
-            <input class="fa fa-trash clearButton" type="reset" value="&#xf1f8" onclick="this.form.reset()">
-            <input class="sumButton" type="button" value="Пресметни" onclick="calculateBezAtestacia()">
+            <input class="fa fa-trash clearButton" type="reset" id="resetBezAtestacia" value="&#xf1f8" onclick="this.form.reset()">
+            <input class="sumButton" type="button" id="sumBtnBezAtestacia" value="Пресметни" onclick="calculateBezAtestacia()">
             <br>
             <br>
             <p style="font-weight: bold; font-size: larger">Обща заработка:
@@ -173,7 +173,7 @@
             </p>
             <br>
             <input class="fa fa-trash clearButton" type="reset" value="&#xf1f8" onclick="this.form.reset()">
-            <input class="sumButton" type="button" value="Пресметни" onclick="calculateChisto()">
+            <input class="sumButton" type="button" id="sumBtnChisto" value="Пресметни" onclick="calculateChisto()">
             <br>
             <br>
             <p style="font-weight: bold; font-size: larger">За получаване:
