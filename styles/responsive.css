@@ -21,6 +21,7 @@
     .tabs {
         margin-top: 3.5rem;
         padding: 1rem;
+        margin-right: 0.5rem;
     }
 
     .tabs div {
@@ -50,12 +51,21 @@
         text-align: center;
         background: #f5f6f7;
         color: #606060;
-        margin: 0 auto;
         line-height: 3rem;
         font-size: 2rem;
         position: relative;
-        left: 25%;
+        left: 30%;
+        margin-left: -0.8em;
+    }
 
+    #tabs i {
+        position: relative;
+        left: -3px;
+    }
+
+    #tabs > label:nth-child(2) > span:nth-child(2) > i {
+        position: relative;
+       left: 0;
     }
 
     #tabs > div > div:nth-child(1), #tabs > div > div:nth-child(2), #tabs > div > div:nth-child(3), #tab4 {
@@ -181,6 +191,42 @@
     #tabs .clearButton{
         font-size: 12px;
         padding: 10px 10px;
+    }
+
+    #tabs > input:checked + label {
+        background: white;
+        color: #368de0;
+        border-color: #368de0;
+    }
+
+    #tabs label p {
+        display: block;
+        margin: 0 1rem;
+        position: relative;
+        top: 14px;
+        font-size: 10px;
+        width: 5rem;
+    }
+
+    #tabs > label:nth-child(2) > p {
+        position: relative;
+        right: 46px;
+    }
+
+    #tabs > label:nth-child(4) > p {
+        position: relative;
+        right: 42px;
+    }
+
+    #tabs > label:nth-child(6) > p {
+        position: relative;
+        right: 39px;
+        width: 9rem;
+    }
+
+    #tabs > label:nth-child(8) > p {
+        position: relative;
+        left: -11px;
     }
 
 }
