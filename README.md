@@ -1,6 +1,6 @@
 # OKCSalary
 
-Web app for calculating a monthly salary made for a private company.
+###### Web app for calculating a monthly salary made for a private company.
 
 ![](image/screenshot/okcsalary-github-io-2018-12-02-23_41_47.png)
 
