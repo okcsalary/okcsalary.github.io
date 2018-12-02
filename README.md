@@ -9,7 +9,15 @@ Web app for calculating a monthly salary made for a private company.
 ![](image/screenshot/mobile-okcsalary-github-io-2018-12-03-00_21_28.png)
 
 ## How To Use
-Usage instructions
+1. You choose the right job from the menu tab.
+2. Enter the information in the fields.
+3. Press the calculate button.
+4. In the total work field, the calculated amount will be displayed.
+5. Click the arrow button, and the app will transfer you to a net amount.
+6. Re-enter the correct values.
+7. Press the calculate button.
+8. You will receive the net amount in the box.  
+If you mistaken one of the values, click the bucket icon button to delete all fields.
 
 ## Technologies
 
@@ -17,9 +25,5 @@ JavaScript, jQuery, CSS and HTML
 
 ## Author
 Martin Valchev  
-[1.1]: http://i.imgur.com/P3YfQoD.png (facebook)  
-[2.1]: http://i.imgur.com/0o48UoR.png (github)  
 
-[1]: https://www.facebook.com/martin.valchev.7
-[2]: https://github.com/MartinValchevv
 
