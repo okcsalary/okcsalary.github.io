@@ -4,9 +4,13 @@
 
 ![](image/screenshot/okcsalary-github-io-2018-12-02-23_41_47.png)
 
-**Mobile View**  
+## Live On
 
-![](image/screenshot/mobile-okcsalary-github-io-2018-12-03-00_21_28.png)
+https://okcsalary.github.io/
+
+## Source Code
+
+https://github.com/okcsalary/okcsalary.github.io
 
 ## How To Use
 1. You choose the right job from the menu tab.
